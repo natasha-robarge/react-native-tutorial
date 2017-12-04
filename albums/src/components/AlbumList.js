@@ -4,12 +4,10 @@ import axios from 'axios';
 
 class AlbumList extends Component {
   componentWillMount() {
-    axios.get('http://rallycoding.herokuapp.com/api/music_albums')
-      .then((res) => {
-        console.log(`response, ${res}`);
-      }).catch((err) => {
-        console.log(`Error, ${err}`);
-      });
+    axios.get('https://rallycoding.herokuapp.com/api/music_albums')
+      .then(response => {
+        console.log(response);
+      }).catch(err => console.log(`Error, ${err}`));
   }
 
   render() {
